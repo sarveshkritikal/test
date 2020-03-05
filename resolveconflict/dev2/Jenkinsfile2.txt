@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    stages {
+
+	
+        // Run Application for Blur
+stage('blur') {
+            steps {
+
+            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+
+               sh 'python3 test_script_v1.6.py blur'
+                                      }
+            }
+        }
+
+
+        // Run Application for curv
+stage('curv') {
+            steps {
+
+            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+
+               sh 'python3 test_script_v1.6.py curve'
+                                   }
+            }
+        }
+
+ 
+
+    }
+}
+
+
+
+
+
+
+
+			
+	
