@@ -7,7 +7,7 @@ pipeline {
 stage('blur') {
             steps {
 
-          catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+        444  ##catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
 
                sh 'python3 test_script_v1.6.py blur'
                                       }
@@ -19,7 +19,7 @@ stage('blur') {
 stage('curv') {
             steps {
 
-         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+       444  ##catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
 
                sh 'python3 test_script_v1.6.py curve'
                                    }
